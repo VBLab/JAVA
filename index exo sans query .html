@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de fois que tu cliques</title>
+</head>
+<body>
+    <button onclick="incrementer()"> Incrementer !</button>
+    <div id="nombre">0 </div>
+    <script>
+        var nbClick = 0;
+        function incrementer(){
+            nbClick++;
+            document.querySelector ('#nombre').innerText = nbClick;
+        }
+    </script>
+    
+</body>
+</html>
