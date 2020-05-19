@@ -1,4 +1,4 @@
-POO : e pense POO...C'est une façon de conceptualiser , une représentation des choses... Concept en blocs pour les faire interagir entre eux, afin de faciliter la programmation.
+POO : Je pense POO...C'est une façon de conceptualiser , une représentation des choses... Concept en blocs pour les faire interagir entre eux, afin de faciliter la programmation.
 Mais c'est pas toujours plus simple !A différencier de la programmation procédurale, qui fait étape par étape, alors que objet propose un bloc de données.
 
 Objet : C'est un exemplaire d'un certain type, c'est synonyme d'instance.
@@ -12,13 +12,28 @@ Si on est pointilleux, on fait une distinction entre méthode et constructeur...
 Opérateur // NEW // ex : new personnage.=> on appelle le constructeur, on peut definir +s conctructeurs pour une classe.
 
 CLASSE : un truc regroupant des variables et des fonctions, un groupement logique, que tout objet issu de cette classe possédera.
+ex: moule à gateaux / on peut faire cuire plein de recette de pâtes dedans (pouelleux, far, coockies)
+une classe comporte des attributs.
 
 HERITAGE :permet d'ajouter des éléments à une classe, de donner à une classe des propriétés propres à une autre.
-Opérateur // extends
+C'est qqch qui va nous permettre de faciliter la réutilisation, il definie une relation entre les classes.
+La classe/ Personne => Mère = généralisation ex: est une femme
+La classe /  fille = spécialisation -hérite des attributs et des méthodes de la classe mère (opération = faire de la surchage)
+ex : est une femme + étudiante
+Opérateur // extends ex : fille extends=>Personne
+si on ne met rien, toute les classes héritent de la classe OBject
 
 
-ENCAPSULATION
+ENCAPSULATION : pour interdire à un utilisateur de modifier directement les attributs d'un objet,
+l'utilisateur doit se contenter d'invoquer les méthodes, et donc d'ignorer les attributs.
+c'est la visibilité, def pour les attributs et les méthodes.
+Pour instaurer une telle contrainte, on dit que les attributs sont “privés”. 
+EX //  les drivers de base de données proposent des méthodes pour lire, écrire dans la bdd et nous n’avons pas besoin ni envie de voir le code qui le réalise.
+private / attributs
+public / methods
+si on ne met rien, on dit que c'est package, visible par toutes les classes.
+Protect // attributs visible par toutes les filles.
 
 
-POLYMORPHISME
+POLYMORPHISME :a développer....
 
