@@ -1,14 +1,16 @@
 package warriorPack;
 
-public class Guerrier {
+public class Guerrier extends Personnages{
 
-	public Guerrier(String string, int i, int j) {
-		// TODO Auto-generated constructor stub
-	}
-
-	public void spawnGuerrier(String str) {
-		// TODO Auto-generated method stub
+		private final static int VIE = 5;
+		private final static int VIE_MAX = 10;
+		private final static int FORCE = 5;
+		private final static int FORCE_MAX = 10;
 		
+
+		public Guerrier (String name) {
+			super(name,VIE, FORCE);
+
 	}
 
 }
