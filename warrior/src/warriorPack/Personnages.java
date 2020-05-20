@@ -35,7 +35,8 @@ public class Personnages {
 	}
 	
 	public String toString() {
-		return name + "haha"+ "vie" + "force";
+		return name + "" 
+					+ vie + "vies ["+force+"]";
 	}
 	
 	
