@@ -7,9 +7,18 @@ public class Magicien extends Personnages {
 	private final static int FORCE = 8;
 	private final static int FORCE_MAX = 15;
 	
-	
+	public Magicien() {
+		this("mag");
+}
 	public Magicien (String name) {
 		super(name,VIE, FORCE);
 
+	}
+	public Magicien (String name, int vie, int force) {
+		super (name, vie, force);
+
+}
+	public String toString() {
+		return "mouai";
 	}
 }

@@ -34,6 +34,9 @@ public class Personnages {
 		this.force = force;
 	}
 	
+	public String toString() {
+		return name + "haha"+ "vie" + "force";
+	}
 	
 	
 
