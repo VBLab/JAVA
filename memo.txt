@@ -11,9 +11,13 @@ CONSTRUCTEUR :est une méthode, appelée implicitement à la création de l'obje
 Si on est pointilleux, on fait une distinction entre méthode et constructeur...Dans le cas du constructeur, il porte  le nom de la classe.
 Opérateur // NEW // ex : new personnage.=> on appelle le constructeur, on peut definir +s conctructeurs pour une classe.
 
+
 CLASSE : un truc regroupant des variables et des fonctions, un groupement logique, que tout objet issu de cette classe possédera.
 ex: moule à gateaux / on peut faire cuire plein de recette de pâtes dedans (pouelleux, far, coockies)
-une classe comporte des attributs.
+une classe comporte des attributs. Classe= Modèle. 
+
+INSTANCE = usage d'un modèle. Instrancier une classe = créer une classe.
+Attention l'instance, n'a aucune relation avec l'héritage.
 
 HERITAGE :permet d'ajouter des éléments à une classe, de donner à une classe des propriétés propres à une autre.
 C'est qqch qui va nous permettre de faciliter la réutilisation, il definie une relation entre les classes.
@@ -36,4 +40,6 @@ Protect // attributs visible par toutes les filles.
 
 
 POLYMORPHISME :a développer....
+
+
 
