@@ -18,4 +18,10 @@ public class Guerrier extends Personnages{
 		super (name, vie, force);
 
 }
+		public static int getForceMax() {
+			return FORCE_MAX;
+		}
+		public static int getVieMax() {
+			return VIE_MAX;
+		}
 }

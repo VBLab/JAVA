@@ -1,26 +1,18 @@
-package warriorPack;
+package warriorPack; /** tout part du main, quand on fait run, le jeu démarre, mais on écrit le moins de choses possible dedanss */
 
 
 public class Main {
 
-	public static void main(String[] args) { /*  => ça c'est mon programme principale */
-	
-		Magicien mag = new Magicien ("toto");
-		System.out.println(mag.toString());
-		
-		Guerrier gue = new Guerrier("titi");
-		System.out.println(gue.toString());
-		
-		
-		
-	}
+	public static void main(String[] args) { 
+
+		System.out.print("bienvenue sur Warrior");
+		Menu menu = new Menu(); //création de l'objet menu
+		menu.start();
+		}
 }
+		 // démarrage du menu
 		
-		
-	/*
-	 * Menu menu = new Menu(); Menu.start();
-	 * 
-	 * Board board = new Board(); System.out.println(board.toString());
-	 */
-		
-		
+// reste à faire : cf étape 1
+// une boucle While qui met à jour le jeu, tant que le jeu n'est pas fini)
+// mettre à jour (updateGame) = est ce que je joue, est ce que je quiite, où en est mon personnage...
+	
