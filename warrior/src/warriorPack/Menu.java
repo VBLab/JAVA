@@ -67,3 +67,6 @@ public class Menu {
     }
 
 }
+private void play() { // à finir
+	if (joueur == null)
+}

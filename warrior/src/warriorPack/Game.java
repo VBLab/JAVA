@@ -3,5 +3,5 @@ package warriorPack;
 public class Game {
 
 }
-// continet un menu//
-//contientun personnage//
+// contient un menu//
+//contient un personnage//
