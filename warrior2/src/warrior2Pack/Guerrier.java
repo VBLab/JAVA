@@ -17,6 +17,9 @@ public class Guerrier extends Personnages{
 	super (name, vie, force);
 
 }
+	public String toString () {
+		return ("Guerrier" + getName);
+	}
 	public static int getForceMax() {
 		return FORCE_MAX;
 	}

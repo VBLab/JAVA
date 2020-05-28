@@ -17,6 +17,10 @@ public class Magicien extends Personnages{
 		super (name, vie, force);
 
 	}
+	public String toString () {
+		return ("Magicien" + getName);
+	}
+		
 	public static int getVieMax() {
 		return VIE_MAX;
 	}
