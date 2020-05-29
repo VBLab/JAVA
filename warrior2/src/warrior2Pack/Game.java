@@ -11,7 +11,11 @@ public class Game {
 	private Board board;
 	
 	
-	// constructeur 
+	//////////////// constructeur = //////////////
+	//appelée une seule fois
+	// + ne retourne rien
+	// + prend le nom de la classe
+	//+ pour instancier l'objet
 	
 	public Game() {
 		scanner = new Scanner(System.in);
@@ -19,6 +23,8 @@ public class Game {
 		this.board = new Board ();
 		this.joueur = new Personnages();
 	}
+	
+	
 	public void start() {
 		//Menu menu = new Menu();
         int choix;
@@ -88,6 +94,7 @@ public class Game {
 	    private void jouerPartie () {
 	    	System.out.println("Tu as choisis de t'appeler " + this.joueur.getName());
 	    	System.out.println("Lancement de la partie");
+	    	 System.out.println("Voici ton plateau de jeu " + board.toString());
 	    	
 	    	while ( this.positionJoueur < board.getMax()) {
 	    		int dice = rollDice();
@@ -126,7 +133,7 @@ public class Game {
 		            this.setJoueur(new Magicien("courgette"));
 		            break;
 		        }
-	    	 System.out.println(board.toString());
+	    	 //System.out.println("voici ton plateau de jeu "+ board.toString());
 	    	
 	    	System.out.println(this.joueur.getName());
 	    	this.jouerPartie();

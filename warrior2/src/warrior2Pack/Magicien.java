@@ -18,8 +18,11 @@ public class Magicien extends Personnages{
 
 	}
 	public String toString () {
-		return ("Magicien " + super.toString());
+		return ("Magicien " + getName()) ;
+		//super.toString())// fait appel à la méthode du parent.
 	}
+	
+	
 		
 	public static int getVieMax() {
 		return VIE_MAX;
