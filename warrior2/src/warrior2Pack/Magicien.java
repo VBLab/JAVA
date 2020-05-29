@@ -18,7 +18,7 @@ public class Magicien extends Personnages{
 
 	}
 	public String toString () {
-		return ("Magicien" + getName);
+		return ("Magicien " + super.toString());
 	}
 		
 	public static int getVieMax() {

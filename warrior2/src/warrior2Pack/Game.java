@@ -6,7 +6,7 @@ public class Game {
 	//attributs
 	private Menu menu;
 	private Scanner scanner;
-	private Personnages joueur;
+	private Personnages  joueur ; // je vais avoir un attribut qui est de type
 	private int positionJoueur;
 	private Board board;
 	
@@ -17,9 +17,10 @@ public class Game {
 		scanner = new Scanner(System.in);
 		this.menu = new Menu ();
 		this.board = new Board ();
+		this.joueur = new Personnages();
 	}
 	public void start() {
-		Menu menu = new Menu();
+		//Menu menu = new Menu();
         int choix;
         do {
         	
@@ -29,11 +30,13 @@ public class Game {
             this.creatPersonnage();
             break;
         case 2:
-            System.out.println("Jouer \n");
-            this.rollDice();
+            System.out.println("Jouer");
+            this.jouerPartieRapide();
+           
+         
             break;
         case 3:
-            System.out.println("a plus");
+            System.out.println("A plus !");
             break;
         }
            
@@ -49,19 +52,29 @@ public class Game {
 	        System.out.println("1. Guerrier");
 	        System.out.println("2. Magicien");
 	        int choix = scanner.nextInt();
+	        System.out.println("Tu as choisis le " + choix);
 	        System.out.println("Entrer votre nom");
 	        String name = scanner.next();
-	        System.out.println(choix + name);
-	        
+	    
 	        switch (choix) {
 	        case 1:
-	            this.setJoueur(new Guerrier(name));
+	            this.setJoueur(new Guerrier(name));//création d'un nouveau guerrier
 	           // System.out.println(name);//
 	            break;
 	        case 2:
 	            this.setJoueur(new Magicien(name));
 	            break;
 	        }
+	        
+	        System.out.println(choix + name);
+	        System.out.println(joueur.toString());
+	        //this.joueur.setName(name);
+	        
+	       // System.out.println(joueur.toString());
+	       //this.joueur.setForce(10);
+	        System.out.println(joueur.getForce());
+	        this.jouerPartie();
+	        
 	    }
 
 	    public Personnages getJoueur() {
@@ -72,29 +85,60 @@ public class Game {
 	        this.joueur = joueur;
 	    }
 	    
-
+	    private void jouerPartie () {
+	    	System.out.println("Tu as choisis de t'appeler " + this.joueur.getName());
+	    	System.out.println("Lancement de la partie");
+	    	
+	    	while ( this.positionJoueur < board.getMax()) {
+	    		int dice = rollDice();
+	    		while (menu.afficherDice(dice, positionJoueur) != 5) {}
+	    		 positionJoueur += dice; // raccourci pour écrire positionJoueur = positionJoueur+dice
+	    		 
+	    		 System.out.println(board.getTypeCase(positionJoueur)); // renvoi le type de case cf board
+	    	}
+	    	System.out.println("Bravo ! Tu as gagné !!!!");
+	    	
+	    	
+	    }
+	    public int rollDice() {
+	    	
+	    	return 1 +(int) (Math.random()*6);
+		}
+	    
+	    public void position(int dice) {
+			 this.positionJoueur = this.positionJoueur + dice;
+			 if (this.positionJoueur > board.getMax()) {
+				 System.out.println("Fin du jeu");
+				 
+			 }
+		}
+	    
+	    private void jouerPartieRapide () {
+	    	int choix = 1 +(int) (Math.random()*2);
+	    	
+	    	System.out.println("création d'un personnage aléatoire");
+	    	 switch (choix) {
+		        case 1:
+		            this.setJoueur(new Guerrier("patate"));//création d'un nouveau guerrier
+		           // System.out.println(name);//
+		            break;
+		        case 2:
+		            this.setJoueur(new Magicien("courgette"));
+		            break;
+		        }
+	    	 System.out.println(board.toString());
+	    	
+	    	System.out.println(this.joueur.getName());
+	    	this.jouerPartie();
+	    }
+	  
 	    
 	    
-	    // rollDice = dé
- public void rollDice() {
-	int option;
-	int dice = 1 +(int) (Math.random()*6);
-	position(dice);
-	option = menu.afficherDice(dice, this.positionJoueur);
-	if (this.positionJoueur < Board.cases);
-	switch (option) {
-	case 5:
-		this.rollDice();
-		break;
-	}
-	}
-	public void position() {
-		 this.positionJoueur = this.positionJoueur + dice;
-		 if (positionJoueur > this.board) {
-			 positionJoueur = CASE_MAX;
-			 
-		 }
-	}
+	   
+ 
+ 
+	
+	
 	}
 
 // PROJET 1//

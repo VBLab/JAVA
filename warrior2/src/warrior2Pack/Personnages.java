@@ -1,18 +1,25 @@
 package warrior2Pack;
 
 public class Personnages {
+	
+	// attributs de la classe
 	private String name;
 	private int vie;
 	private int force;
 	
+	
+	// constructeur de la classe.
 	public Personnages (String name,int vie, int force) {
 	setName(name); 
 	setVie (vie);
 	setForce (force);
 		
 }
+	public Personnages () { 
+		this.name = "";
+	}
  
-
+	// Méthode de la classe 
 	public String getName() {
 		return name;
 	}
@@ -32,9 +39,9 @@ public class Personnages {
 		this.force = force;
 	}
 	
-	public String toString() {
-		return name + "" 
-					+ vie + "vies ["+force+"]";
+	public  String toString() {
+		return name + " Vie : " 
+					+ vie +  ", force : "+force+"";
 	}
 	
 }

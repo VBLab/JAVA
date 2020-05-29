@@ -11,14 +11,13 @@ public class Guerrier extends Personnages{
 }
 	public Guerrier (String name) {
 		this(name,VIE, FORCE);
-
 }
 	public Guerrier (String name, int vie, int force) {
 	super (name, vie, force);
 
 }
 	public String toString () {
-		return ("Guerrier" + getName);
+		return ("Guerrier" + super.getName());
 	}
 	public static int getForceMax() {
 		return FORCE_MAX;

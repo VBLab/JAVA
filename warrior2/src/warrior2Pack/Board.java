@@ -8,12 +8,26 @@ private final static int CASE_MAX = 64;
 	public Board() {
 		cases = new int[CASE_MAX];
 		for (int i=0; i<cases.length; i++) {
-			cases[i] = 0;
+			cases[i] = (int) (Math.random()*4);
 		}
 	}
 
+	/**
+	 * 0 = case vide
+	 * 1 = ennemi
+	 * 2 = arme
+	 * 3 = potion
+	 *
+	 * @return
+	 */
+ public int getTypeCase(int positionJoueur) {
+	 return cases [positionJoueur];
+ }
 	public int[] getCases() {
 		return cases;
+	}
+	public int getMax() {
+		return CASE_MAX;
 	}
 	public String toString() {
 	String res = "|";
@@ -23,4 +37,5 @@ private final static int CASE_MAX = 64;
 	return res;
 }
 }
+
 

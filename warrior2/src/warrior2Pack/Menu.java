@@ -29,9 +29,9 @@ public class Menu {
 	// afficher le dé
 	
 	public  int afficherDice(int dice, int position) {
-		System.out.println("le dé est lancé" + dice);
-		System.out.println("Nouvelle position"+ position);
-		System.out.println("5.relancer le dé");
+		System.out.println("le dé est lancé de " + dice);
+		System.out.println("Nouvelle position est de  "+ position);
+		System.out.println("5. Pour relancer le dé ");
 		return scanner.nextInt();
 	}
 }
