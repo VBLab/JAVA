@@ -6,20 +6,34 @@ public class Personnages {
 	private String name;
 	private int vie;
 	private int force;
+	private Armes armes;
 	
 	
 	// constructeur de la classe.
 	public Personnages (String name,int vie, int force) {
+	
+	this.armes = new Armes (name, 0);
+	
 	setName(name); 
 	setVie (vie);
 	setForce (force);
+	setArmes(armes);
 		
 }
+	// Méthode de la classe 
+	public void equiArmes (Armes armes ) {
+		setArmes(armes);
+	}
+	public Armes getArmes() {
+		return armes;
+	}
+	public void setArmes(Armes armes) {
+		this.armes = armes;
+	
+	}
 	public Personnages () { 
 		this.name = "";
 	}
- 
-	// Méthode de la classe 
 	public String getName() {
 		return name;
 	}
