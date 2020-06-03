@@ -6,7 +6,7 @@ public class Game {
 	// attributs
 	private Menu menu;
 	private Scanner scanner;
-	private Personnages joueur; // je vais avoir un attribut qui est de type
+	private Personnages joueur; // je vais avoir un attribut qui est de type...personnages et il s'appelle personnage...
 	private int positionJoueur;
 	private Board board;
 

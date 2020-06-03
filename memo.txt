@@ -39,7 +39,28 @@ si on ne met rien, on dit que c'est package, visible par toutes les classes.
 Protect // attributs visible par toutes les filles.
 
 
-POLYMORPHISME :a développer....
+POLYMORPHISME :
+quand une méthode est utilisée dans une classe mèer, j'ai le droit de la réécrire dans une classe fille.
+Permet d'avoir des classes différentes mais qui partagenet une méthode commume...
+
+LES COLLECTIONS D'OBJETS: Une collection permet de stocker un nombre variable d'objet.
+
+/*syntaxe précise = qd tu déclares ton ArrayList ArrayList<case> +nom
+ce qu'il y a entre <>, permet de typer l'ArrayList.
+pour pouvoir faire ça je dois déjà avoir une classe CASE.
+et sa seule fonction est d'être la mère de toute les autres.*/
+
+// ArrayList simplifie la vie car évite de 
+//manipuler des tableaux trop complexes.
+
+//utiliser le package "java.util.ArrayList"
+
+les objets de type List servent à stocker des objets sans condition particulière sur la façon de les stocker.
+Ils acceptent toutes les valeurs,même les valeurs null.
+Pour simplifier = tableaux extensibles à volonté.(on peut insérer autant d'élément que l'on veut sans craindre de dépasser la taille).
+
+Les autres types de collection : //Set et //Map (stockent un cople clé-valeur)
+Pour 
 
 
 

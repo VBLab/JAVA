@@ -1,6 +1,6 @@
 package warrior2Pack;
 
-public class Armes {
+public class Armes extends Case {
 	// attributs
 private String nom;
 private int force;

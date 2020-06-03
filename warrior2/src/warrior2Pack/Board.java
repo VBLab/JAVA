@@ -1,4 +1,13 @@
 package warrior2Pack;
+//taille de l'arrayList
+//arraylist( de case)
+/*syntaxe précise = qd tu déclares ton ArrayList ArrayList<case> +nom
+pour pouvoir faire ça je dois déjà avoir une classe CASE.
+et sa seule fonction est d'être la mère de toute les autres.*/
+
+// ArrayList simplifie la vie car évite de 
+//manipuler des tableaux trop complexes.
+
 
 public class Board {
 private final static int CASE_MAX = 64;

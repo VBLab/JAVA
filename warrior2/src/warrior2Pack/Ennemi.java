@@ -1,5 +1,5 @@
 package warrior2Pack;
 
-public class Ennemi {
+public class Ennemi extends Case {
 
 }
