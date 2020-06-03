@@ -59,8 +59,10 @@ les objets de type List servent à stocker des objets sans condition particuliè
 Ils acceptent toutes les valeurs,même les valeurs null.
 Pour simplifier = tableaux extensibles à volonté.(on peut insérer autant d'élément que l'on veut sans craindre de dépasser la taille).
 
-Les autres types de collection : //Set et //Map (stockent un cople clé-valeur)
-Pour 
+Les autres types de collection : 
+//Set 
+et //Map (stockent un cople clé-valeur)
+
 
 
 

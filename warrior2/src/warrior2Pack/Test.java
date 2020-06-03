@@ -1,6 +1,6 @@
 package warrior2Pack;
 
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 
 public class Test {
 
@@ -17,3 +17,21 @@ public class Test {
 		    }               
 		  }
 	}
+
+private int [] cases;
+
+public Board() {
+	cases = new int[CASE_MAX];
+	for (int i=0; i<cases.length; i++) {
+		cases[i] = (int) (Math.random()*4);
+	}
+}
+
+/**
+ * 0 = case vide
+ * 1 = ennemi
+ * 2 = arme
+ * 3 = potion
+ *
+ * @return
+ */

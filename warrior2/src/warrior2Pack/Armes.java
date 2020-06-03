@@ -32,4 +32,16 @@ public void setForce(int force) {
 	this.force = force;
 }
 
+@Override
+public void interaction() {
+	
+	
+}
+
+@Override
+public void interaction(Personnages joueur) {
+	// TODO Auto-generated method stub
+	
+}
+
 }

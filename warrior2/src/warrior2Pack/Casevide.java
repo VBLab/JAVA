@@ -1,5 +1,6 @@
 package warrior2Pack;
 
-public class Casevide {
+public class Casevide extends Case{
+	
 
 }

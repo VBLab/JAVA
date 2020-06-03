@@ -9,7 +9,7 @@ public class Main {
 		// initialisation du jeu
 		Game game = new Game(); //création du jeu (Game)
 		game.start();
-		
+		// va falloir faire un do/while pour update le jeu
 	
 		}
 
