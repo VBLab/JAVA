@@ -44,18 +44,13 @@ public class Ennemi extends Case {
     }
 
 
-    // utilisation de la méthode abstract de Case
-	@Override
-	public void interaction() {
-		System.out.println(this.name);
-		
-	}
+   
 
 
 
 	@Override
 	public void interaction(Personnages joueur) {
-		// TODO Auto-generated method stub
+		
 		
 	}
  

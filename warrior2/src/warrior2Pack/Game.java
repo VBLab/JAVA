@@ -11,10 +11,11 @@ public class Game {
 	private Board board;
 
 	//////////////// constructeur = //////////////
-	// appelée une seule fois
-	// + ne retourne rien
-	// + prend le nom de la classe
-	// + pour instancier l'objet
+	/* appelée une seule fois
+ 	+ ne retourne rien
+	+ prend le nom de la classe
+	+ pour instancier l'objet
+	+ mais il peut y avoir +s constructeurs... */
 
 	public Game() {
 		scanner = new Scanner(System.in);
@@ -69,6 +70,7 @@ public class Game {
 		case 2:
 			this.setJoueur(new Magicien(name));
 			break;
+		default : break; // qd on peut tomber sur autre chose
 		}
 
 		System.out.println(choix + name);
@@ -93,10 +95,11 @@ public class Game {
 	private void jouerPartie() {
 		System.out.println("Tu as choisis de t'appeler " + this.joueur.getName());
 		System.out.println("Lancement de la partie");
-		System.out.println("Voici ton plateau de jeu " + board.toString());
+		/*System.out.println("Voici ton plateau de jeu " + board.toString());*/
 
 		while (this.positionJoueur < board.getMax()) {
-			System.out.println(board.getTypeCase(positionJoueur)); // vérification de la position joueur au 1er tour avant lancement dé.
+			Case currentCase = board.getCaseAtIndex(positionJoueur);// variable intermédiaire
+			System.out.println(currentCase.getName()); // vérification de la position joueur au 1er tour avant lancement dé.
 			int dice = rollDice();
 			positionJoueur += dice; // raccourci pour écrire positionJoueur = positionJoueur+dice
 			while (menu.afficherDice(dice, positionJoueur) != 5) {
@@ -142,10 +145,3 @@ public class Game {
 
 }
 
-// PROJET 1//
-// + int etatDuJeu
-// + Personnages p
-// + Menu m
-// + void jourParie()
-// + int positionPersonnage
-//+ void creerPersonnage()

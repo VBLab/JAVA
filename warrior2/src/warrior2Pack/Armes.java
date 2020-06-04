@@ -2,24 +2,24 @@ package warrior2Pack;
 
 public class Armes extends Case {
 	// attributs
-private String nom;
+private String name;
 private int force;
 
 	// constructeur de la classe
-public Armes (String nom, int force) {
+public Armes (String name, int force) {
 	
-	setNom(nom);
+	setName(name);
 	setForce(force);
 }
 
 // méthode de la classe
-public String getNom() {
-	return nom;
+public String getName() {
+	return this.name;
 }
 
 
-public void setNom(String nom) {
-	this.nom = nom;
+public void setName(String name) {
+	this.name = name;
 }
 
 
@@ -32,15 +32,10 @@ public void setForce(int force) {
 	this.force = force;
 }
 
-@Override
-public void interaction() {
-	
-	
-}
 
 @Override
 public void interaction(Personnages joueur) {
-	// TODO Auto-generated method stub
+	
 	
 }
 
