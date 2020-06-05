@@ -59,7 +59,7 @@ public class Board {
 		}
 	}
 	}
-    
+	
     
     // méthode affiche les index
    /* for (int i=0; i<cellules.size(); i++ ) {

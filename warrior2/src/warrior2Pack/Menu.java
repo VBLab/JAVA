@@ -31,6 +31,7 @@ public class Menu {
 	public  int afficherDice(int dice, int position) {
 		System.out.println("le dé est lancé de " + dice);
 		System.out.println("Nouvelle position est de  "+ position);
+		System.out.println("Force et vie //......//");
 		System.out.println("5. Pour relancer le dé ");
 		return scanner.nextInt();
 	}

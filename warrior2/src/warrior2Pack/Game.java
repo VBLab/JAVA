@@ -93,13 +93,14 @@ public class Game {
 	}
 
 	private void jouerPartie() {
-		System.out.println("Tu as choisis de t'appeler " + this.joueur.getName());
+		System.out.println("Tu as choisis de t'appeler " + this.joueur.getName()  + " ta vie est de ==> "+ this.joueur.getVie() + " ta force est de ===> " + this.joueur.getForce());
 		System.out.println("Lancement de la partie");
 		/*System.out.println("Voici ton plateau de jeu " + board.toString());*/
 
 		while (this.positionJoueur < board.getMax()) {
 			Case currentCase = board.getCaseAtIndex(positionJoueur);// variable intermédiaire
-			System.out.println(currentCase.getName()); // vérification de la position joueur au 1er tour avant lancement dé.
+			currentCase.interaction(this.joueur);// on appelle la fonction intaraction qui va venir...
+			System.out.println("tu es tombé sur ====>" + currentCase.getName()); // vérification de la position joueur au 1er tour avant lancement dé.
 			int dice = rollDice();
 			positionJoueur += dice; // raccourci pour écrire positionJoueur = positionJoueur+dice
 			while (menu.afficherDice(dice, positionJoueur) != 5) {

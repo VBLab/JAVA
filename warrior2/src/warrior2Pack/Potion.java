@@ -33,8 +33,11 @@ public class Potion extends Case {
 	public void interaction(Personnages joueur) {
 		/*int nouvelleVie = joueur.getVie() + this.vie;
 		joueur.setVie(nouvelleVie); */
+		
 		joueur.setVie(joueur.getVie() + this.vie);
+		//System.out.println("Bravo ! Tu as gangé de la vie");//
 		
 	}
 }
+
 //constructeur

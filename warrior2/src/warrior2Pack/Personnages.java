@@ -12,7 +12,8 @@ public class Personnages {
 	// constructeur de la classe.
 	public Personnages (String name,int vie, int force) {
 	
-	this.armes = new Armes (name, 0);
+		// qd le joueur est instancié il a une arme vide
+	this.armes = new Armes ("armeVide", 0);
 	
 	setName(name); 
 	setVie (vie);

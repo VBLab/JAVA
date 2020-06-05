@@ -40,8 +40,8 @@ Protect // attributs visible par toutes les filles.
 
 
 POLYMORPHISME :
-quand une méthode est utilisée dans une classe mèer, j'ai le droit de la réécrire dans une classe fille.
-Permet d'avoir des classes différentes mais qui partagenet une méthode commume...
+quand une méthode est utilisée dans une classe mère, j'ai le droit de la réécrire dans une classe fille.
+Permet d'avoir des classes différentes mais qui partagent une méthode commume...
 
 LES COLLECTIONS D'OBJETS: Une collection permet de stocker un nombre variable d'objet.
 
