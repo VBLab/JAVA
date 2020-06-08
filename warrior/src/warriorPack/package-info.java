@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author famille
- *
- */
-package warriorPack;

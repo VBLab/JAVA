@@ -35,3 +35,38 @@ public Board() {
  *
  * @return
  */
+//...
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+
+public class CalculatriceFenetre extends JFrame {
+	//...
+
+	private void build(){
+		JMenuBar menuBar = new JMenuBar();
+
+		JMenu menu1 = new JMenu("Calculatrice");
+
+		JMenuItem calculer = new JMenuItem(new CalculAction(this, "Calculer"));
+		menu1.add(calculer);
+
+		JMenuItem quitter = new JMenuItem(new QuitterAction("Quitter"));
+		menu1.add(quitter);
+
+		menuBar.add(menu1);
+
+		JMenu menu2 = new JMenu("?");
+
+		JMenuItem aPropos = new JMenuItem(new AProposAction(this, "A propos"));
+		menu2.add(aPropos);
+
+		menuBar.add(menu2);
+
+		setJMenuBar(menuBar);
+
+		//...
+	}
+
+	//...
+}
