@@ -19,6 +19,7 @@ public class Board {
 	
 	
 	// constructeur
+	
 	public Board() {
 	this.cellules = new ArrayList<Case>();
 	cellules.add( new Casevide ());

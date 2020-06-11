@@ -1,10 +1,9 @@
 package warrior.vue;
 
 import javax.swing.SpringLayout;
-
 import javax.swing.JPanel;
-
 import java.awt.Color;
+import java.awt.Dimension;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,14 +11,17 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+
 public  class GUI extends JFrame{
     // Atribut
  
 	SpringLayout layout = new SpringLayout();
 	Plateau plaplateau = new Plateau();
+	JPanel backPanel = new BackGroundPanel();//créer une classe background panel
+	JPanel avatarPanel = new  FenetreJoueur();
 
     // Constructeur
-	// instantiation  de la fenetre interfaceGraph
+	/** instantiation  de la fenetre interfaceGraph**/
     public GUI() {
         this.setSize(1500,1000);
         this.setResizable(false);
@@ -29,7 +31,13 @@ public  class GUI extends JFrame{
        // affichage de la barre
        this.setJMenuBar(this.BarreDeMenu());
        this.setContentPane(this.ZoneTravail()); 
+       
+       backPanel.setPreferredSize(new Dimension(1500, 1000));
+       this.add(backPanel);
  
+        avatarPanel.setPreferredSize(new Dimension(200,150));
+        this.add(avatarPanel);
+        
         
         //appel du plateau (class Plateau)--en test pour l'instant--
        // this.setContentPane(new Plateau());
@@ -43,11 +51,13 @@ public  class GUI extends JFrame{
     
 
     // Methode
+    
  public  JMenuBar BarreDeMenu() {
 	 //création d'une barre de menu (container global)
 	 JMenuBar menuBar = new JMenuBar ();
 	 
-	 // création de la partie jeux contenu dans la barre de menu = menu 1
+	 /** création de la partie jeux contenu dans la barre de menu = menu 1**/
+	 
 	 JMenu menu1 = new JMenu ("Jeux");
 	 	// dans le menu jeux, nouveaux items
 	 	JMenuItem nouveauPersonnage = new JMenuItem ("Nouveau Personnage");
@@ -70,10 +80,8 @@ public  class GUI extends JFrame{
 	 return menuBar;
 	 
  }
- /* JPanel = composant de type container dont la vocation
- est d'accueillir d'autres objets de même types ou d'autres objets d types composants.*/
-        
-        
+ /** JPanel = composant de type container dont la vocation
+ est d'accueillir d'autres objets de même types ou d'autres objets d types composants.**/
         
         
  public JPanel ZoneTravail() {
@@ -90,7 +98,7 @@ public  class GUI extends JFrame{
 	 pan.add(titreAccueil);
 	 
 	// new Plateau ();
-	 JPanel plateauJeux =new JPanel (); //=>panel plateau accroché à la class Plateau
+	 JPanel plateauJeux =new Plateau(); //=>panel plateau accroché à la class Plateau
 	 plateauJeux.setBackground(Color.BLACK);
 	 layout.putConstraint(SpringLayout.WEST, plateauJeux,40, SpringLayout.WEST, pan);
 	 layout.putConstraint(SpringLayout.EAST, plateauJeux,-400, SpringLayout.EAST, pan);
@@ -106,32 +114,35 @@ public  class GUI extends JFrame{
 	 layout.putConstraint(SpringLayout.SOUTH, fenetreJoueur,-40, SpringLayout.SOUTH, pan);
 	 pan.add(fenetreJoueur);
 	 
+	 
 	 JButton rollDice = new JButton ("lancer le Dé");
 	 layout.putConstraint(SpringLayout.WEST, rollDice,1200, SpringLayout.WEST, pan);
-	 layout.putConstraint(SpringLayout.NORTH, rollDice,-90, SpringLayout.NORTH, pan);
+	 layout.putConstraint(SpringLayout.EAST, rollDice,-90, SpringLayout.EAST, pan);
 	 layout.putConstraint(SpringLayout.NORTH, rollDice,750, SpringLayout.NORTH, pan);
-	 pan.add(rollDice);
+	 plateauJeux.add(rollDice);
 	 
 	 
-	 JButton quitter = new JButton ("Quitter la partie");
-	 layout.putConstraint(SpringLayout.WEST, quitter,1200, SpringLayout.WEST, pan);
-	 layout.putConstraint(SpringLayout.NORTH,quitter ,-90, SpringLayout.NORTH, pan);
-	 layout.putConstraint(SpringLayout.NORTH, quitter,800, SpringLayout.NORTH, pan);
-	 pan.add(quitter);
 	 
-	 
-	 /*JButton attaquer = new JButton ("Attaquer");
+	 JButton attaquer = new JButton ("Attaquer");
 	 layout.putConstraint(SpringLayout.WEST, attaquer,1500, SpringLayout.WEST, pan);
-	 layout.putConstraint(SpringLayout.NORTH,attaquer ,-90, SpringLayout.NORTH, pan);
+	 layout.putConstraint(SpringLayout.EAST,attaquer ,-90, SpringLayout.EAST, pan);
 	 layout.putConstraint(SpringLayout.NORTH, attaquer,800, SpringLayout.NORTH, pan);
-	 pan.add(attaquer);
+	 plateauJeux.add(attaquer);
 	 
 	 
 	 JButton defendre = new JButton ("défendre");
 	 layout.putConstraint(SpringLayout.WEST, defendre,1500, SpringLayout.WEST, pan);
-	 layout.putConstraint(SpringLayout.NORTH,defendre ,-90, SpringLayout.NORTH, pan);
+	 layout.putConstraint(SpringLayout.EAST,defendre ,-90, SpringLayout.EAST, pan);
 	 layout.putConstraint(SpringLayout.NORTH, defendre,850, SpringLayout.NORTH, pan);
-	 pan.add(defendre);*/
+	 plateauJeux.add(defendre);
+	 
+	 JButton boutonEx = new JButton("Quitté");
+     //boutonEx.setBackground(Color.BLACK);
+     layout.putConstraint(SpringLayout.WEST, boutonEx,1200, SpringLayout.WEST, pan);
+     layout.putConstraint(SpringLayout.EAST, boutonEx,-90, SpringLayout.EAST, pan);
+     layout.putConstraint(SpringLayout.NORTH, boutonEx,800, SpringLayout.NORTH, pan);
+     plateauJeux.add(boutonEx);
+	 
 	 
 	 return pan;
 	 }
@@ -139,10 +150,16 @@ public  class GUI extends JFrame{
 	
 }
 
- /*public JButton BoutonJouer () {
+ /*public JButton BoutonJouer () { //pour lancer la partie
 	 JButton menuBouton = new JButton ();
  }*/
 
+/*JButton boutonDé = new JButton("Lancer le dé");
+//boutonDé.setBackground(Color.BLACK);
+layout.putConstraint(SpringLayout.WEST, boutonDé,1200, SpringLayout.WEST, pan);
+layout.putConstraint(SpringLayout.EAST, boutonDé,-90, SpringLayout.EAST, pan);
+layout.putConstraint(SpringLayout.NORTH, boutonDé,750, SpringLayout.NORTH, pan);
+pan.add(boutonDé);*/
  
  
  
